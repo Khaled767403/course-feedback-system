@@ -10,4 +10,5 @@ public class CourseFeedbackSystemApplication {
 		SpringApplication.run(CourseFeedbackSystemApplication.class, args);
 	}
 
+
 }
