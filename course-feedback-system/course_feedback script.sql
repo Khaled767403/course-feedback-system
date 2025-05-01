@@ -1,5 +1,9 @@
+create database course_feedback;
+
+use course_feedback;
+
 CREATE TABLE users (
-  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255),
@@ -7,7 +11,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE courses (
-  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   code VARCHAR(100) NOT NULL UNIQUE,
   instructor_id BIGINT NOT NULL,
@@ -15,7 +19,7 @@ CREATE TABLE courses (
 );
 
 CREATE TABLE feedbackforms (
-  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
   course_id BIGINT NOT NULL,
   created_by BIGINT NOT NULL,
   active BOOLEAN NOT NULL,
@@ -25,7 +29,7 @@ CREATE TABLE feedbackforms (
 );
 
 CREATE TABLE questions (
-  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
   form_id BIGINT NOT NULL,
   text VARCHAR(1000) NOT NULL,
   type ENUM('TEXT', 'RATING') NOT NULL,
@@ -33,13 +37,25 @@ CREATE TABLE questions (
 );
 
 CREATE TABLE feedbacksubmissions (
-  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
   form_id BIGINT NOT NULL,
   student_id BIGINT NOT NULL,
   submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (form_id) REFERENCES feedbackforms(id),
   FOREIGN KEY (student_id) REFERENCES users(id)
 );
+
+CREATE TABLE answers (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  submission_id BIGINT NOT NULL,
+  question_id BIGINT NOT NULL,
+  answer_text TEXT,
+  rating INT,
+  FOREIGN KEY (submission_id) REFERENCES feedbacksubmissions(id),
+  FOREIGN KEY (question_id) REFERENCES questions(id),
+  CHECK (rating BETWEEN 1 AND 5 OR rating IS NULL)
+);
+
 
 CREATE TABLE answers (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
