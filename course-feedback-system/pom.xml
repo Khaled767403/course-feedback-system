@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.5</version>
+		<version>3.3.0</version>
 		<relativePath/>
 	</parent>
 
@@ -28,15 +28,18 @@
 		<module>form-service</module>
 		<module>analytics-service</module>
 		<module>submission-service</module>
+		<module>api-gateway</module>
+		<module>eureka-server</module>
 	</modules>
 
 	<properties>
 		<java.version>21</java.version>
-		<spring.boot.version>3.4.5</spring.boot.version>
+		<spring.boot.version>3.3.0</spring.boot.version> <!-- تغيير الإصدار -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 	</properties>
+
 
 	<dependencyManagement>
 		<dependencies>
@@ -55,7 +58,15 @@
 				<artifactId>shared</artifactId>
 				<version>1.0.0</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>2023.0.2</version> <!-- Compatible with Spring Boot 3.4.5 -->
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
+
 	</dependencyManagement>
 
 	<build>
@@ -64,11 +75,12 @@
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
-					<version>3.4.5</version>
+					<version>3.3.0</version> <!-- ضبط الإصدار الصحيح -->
 				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
+
 
 
 </project>
