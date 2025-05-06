@@ -1,9 +1,9 @@
 package com.course_feedback_system.submission_service.repository;
 
 import com.course_feedback_system.shared.model.FeedbackSubmission;
-import com.course_feedback_system.shared.repository.GenericRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-@Repository
-public interface FeedbackSubmissionRepository extends GenericRepository<FeedbackSubmission> {
-}
+public interface FeedbackSubmissionRepository extends JpaRepository<FeedbackSubmission, Long> {
+    List<FeedbackSubmission> findByForm_Course_Id(Long courseId);
+    List<FeedbackSubmission> findByForm_Course_Instructor_Id(Long instructorId);}

@@ -1,7 +1,11 @@
 package com.course_feedback_system.shared.model;
-
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Getter
+@Setter
 @Entity
 @Table(name = "answers")
 public class Answer {
@@ -22,5 +26,15 @@ public class Answer {
 
     private Integer rating;
 
-    // Getters and setters
+    public Long getCourseId() {
+        return submission != null && submission.getForm() != null
+                ? submission.getForm().getCourse().getId()
+                : null;
+    }
+
+    public Long getInstructorId() {
+        return submission != null && submission.getForm() != null
+                ? submission.getForm().getCourse().getInstructor().getId()
+                : null;
+    }
 }

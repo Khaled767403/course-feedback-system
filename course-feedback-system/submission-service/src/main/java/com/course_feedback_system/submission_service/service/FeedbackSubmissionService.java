@@ -24,10 +24,19 @@ public class FeedbackSubmissionService {
     }
 
     public FeedbackSubmission saveSubmission(FeedbackSubmission submission) {
-        return submissionRepository.saveEntity(submission);
+        return submissionRepository.save(submission);
     }
 
     public void deleteSubmission(Long id) {
         submissionRepository.deleteById(id);
     }
+    public List<FeedbackSubmission> getSubmissionsByCourseId(Long courseId) {
+        return submissionRepository.findByForm_Course_Id(courseId);
+    }
+
+    public List<FeedbackSubmission> getSubmissionsByInstructorId(Long instructorId) {
+        return submissionRepository.findByForm_Course_Instructor_Id(instructorId);
+    }
+
+
 }

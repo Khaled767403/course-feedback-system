@@ -5,5 +5,5 @@ import com.course_feedback_system.shared.repository.GenericRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FormRepository extends GenericRepository<FeedbackForm> {
+public interface FormRepository extends GenericRepository<FeedbackForm, Number> {
 }

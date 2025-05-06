@@ -2,25 +2,19 @@ package com.course_feedback_system.shared.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface GenericRepository<T> extends JpaRepository<T, Long> {
+public interface GenericRepository<T, L extends Number> extends JpaRepository<T, L> {
 
-    default Optional<T> findById(Long id) {
-        return findById(id);
-    }
+    // لا داعي لإعادة تعريف findById لأن JpaRepository يحتوي عليها بالفعل
+    // يمكنك تركها كما هي في JpaRepository.
 
-    default List<T> findAll() {
-        return findAll();
-    }
+    // لا داعي أيضًا لتعريف findAll لأنه موجود مسبقًا في JpaRepository
 
-    default T saveEntity(T entity) {
-        return save(entity);
-    }
+    // يتم استخدام save المدمج من JpaRepository
+    // يتم استخدام deleteById المدمج من JpaRepository
 
-    default void deleteById(Long id) {
-        deleteById(id);
-    }
 }

@@ -1,268 +1,55 @@
-2025-05-04T18:42:24.280+03:00  INFO 10708 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 10708 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T18:42:24.293+03:00  INFO 10708 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T18:42:24.331+03:00  INFO 10708 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T18:42:24.394+03:00  INFO 10708 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T18:42:25.043+03:00  INFO 10708 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T18:42:25.085+03:00  INFO 10708 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
-2025-05-04T18:42:25.613+03:00  INFO 10708 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T18:42:25.624+03:00  INFO 10708 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T18:42:25.625+03:00  INFO 10708 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T18:42:25.660+03:00  INFO 10708 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T18:42:25.660+03:00  INFO 10708 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
-2025-05-04T18:42:25.898+03:00  INFO 10708 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T18:42:25.933+03:00  INFO 10708 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T18:42:25.956+03:00  INFO 10708 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T18:42:26.148+03:00  INFO 10708 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T18:42:26.166+03:00  INFO 10708 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T18:42:26.583+03:00  INFO 10708 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@441fcf08
-2025-05-04T18:42:26.585+03:00  INFO 10708 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T18:42:27.033+03:00  WARN 10708 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T18:42:27.034+03:00  WARN 10708 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T18:42:27.263+03:00  INFO 10708 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T18:42:27.267+03:00  INFO 10708 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T18:42:27.395+03:00  WARN 10708 --- [user-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.course_feedback_system.user_service.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class com.course_feedback_system.shared.model.User
-2025-05-04T18:42:27.395+03:00  INFO 10708 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T18:42:27.397+03:00  INFO 10708 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-04T18:42:27.403+03:00  INFO 10708 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-04T18:42:27.405+03:00  INFO 10708 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-04T18:42:27.417+03:00  INFO 10708 --- [user-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-04T18:42:27.430+03:00 ERROR 10708 --- [user-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.course_feedback_system.user_service.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class com.course_feedback_system.shared.model.User
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.8.jar:6.1.8]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.0.jar:3.3.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.0.jar:3.3.0]
-	at com.course_feedback_system.user_service.UserServiceApplication.main(UserServiceApplication.java:15) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.0.jar:3.3.0]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.course_feedback_system.user_service.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class com.course_feedback_system.shared.model.User
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.8.jar:6.1.8]
-	... 22 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.course_feedback_system.shared.model.User
-	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:469) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:99) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:249) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:214) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:197) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:1) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317) ~[spring-data-commons-3.3.0.jar:3.3.0]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:286) ~[spring-data-commons-3.3.0.jar:3.3.0]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.3.0.jar:3.3.0]
-	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.3.0.jar:3.3.0]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:292) ~[spring-data-commons-3.3.0.jar:3.3.0]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.3.0.jar:3.3.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.8.jar:6.1.8]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.8.jar:6.1.8]
-	... 33 common frames omitted
-
-2025-05-04T21:43:14.550+03:00  INFO 42212 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 42212 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T21:43:14.710+03:00  INFO 42212 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T21:43:14.747+03:00  INFO 42212 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T21:43:14.747+03:00  INFO 42212 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T21:43:15.393+03:00  INFO 42212 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T21:43:15.438+03:00  INFO 42212 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
-2025-05-04T21:43:15.983+03:00  INFO 42212 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T21:43:15.993+03:00  INFO 42212 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T21:43:15.993+03:00  INFO 42212 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T21:43:16.032+03:00  INFO 42212 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T21:43:16.032+03:00  INFO 42212 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
-2025-05-04T21:43:16.269+03:00  INFO 42212 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T21:43:16.304+03:00  INFO 42212 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T21:43:16.328+03:00  INFO 42212 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T21:43:16.519+03:00  INFO 42212 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T21:43:16.537+03:00  INFO 42212 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T21:43:16.782+03:00  INFO 42212 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3306ffac
-2025-05-04T21:43:16.784+03:00  INFO 42212 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T21:43:16.817+03:00  WARN 42212 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T21:43:16.818+03:00  WARN 42212 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T21:43:17.482+03:00  INFO 42212 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T21:43:17.562+03:00  INFO 42212 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T21:43:17.626+03:00  WARN 42212 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-04T21:43:17.897+03:00  WARN 42212 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-05-04T21:43:18.373+03:00  INFO 42212 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-04T21:43:18.386+03:00  INFO 42212 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
-2025-05-04T21:43:18.454+03:00  INFO 42212 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-05-04T21:43:18.465+03:00  INFO 42212 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 4.213 seconds (process running for 4.526)
-2025-05-04T21:44:29.514+03:00  INFO 42212 --- [user-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-04T21:44:29.514+03:00  INFO 42212 --- [user-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-04T21:44:29.516+03:00  INFO 42212 --- [user-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-05-04T21:47:09.422+03:00  INFO 37012 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 37012 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T21:47:09.423+03:00  INFO 37012 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T21:47:09.464+03:00  INFO 37012 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T21:47:09.464+03:00  INFO 37012 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T21:47:10.194+03:00  INFO 37012 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T21:47:10.235+03:00  INFO 37012 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
-2025-05-04T21:47:10.783+03:00  INFO 37012 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T21:47:10.792+03:00  INFO 37012 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T21:47:10.793+03:00  INFO 37012 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T21:47:10.831+03:00  INFO 37012 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T21:47:10.831+03:00  INFO 37012 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1366 ms
-2025-05-04T21:47:11.082+03:00  INFO 37012 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T21:47:11.119+03:00  INFO 37012 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T21:47:11.143+03:00  INFO 37012 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T21:47:11.338+03:00  INFO 37012 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T21:47:11.357+03:00  INFO 37012 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T21:47:11.602+03:00  INFO 37012 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ed4956f
-2025-05-04T21:47:11.604+03:00  INFO 37012 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T21:47:11.636+03:00  WARN 37012 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T21:47:11.637+03:00  WARN 37012 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T21:47:12.276+03:00  INFO 37012 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T21:47:12.358+03:00  INFO 37012 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T21:47:12.419+03:00  WARN 37012 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-04T21:47:12.682+03:00  WARN 37012 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-05-04T21:47:13.177+03:00  INFO 37012 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-04T21:47:13.187+03:00  INFO 37012 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
-2025-05-04T21:47:13.249+03:00  INFO 37012 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-05-04T21:47:13.260+03:00  INFO 37012 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 4.133 seconds (process running for 4.464)
-2025-05-04T21:48:17.071+03:00  INFO 44712 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 44712 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T21:48:17.074+03:00  INFO 44712 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T21:48:17.115+03:00  INFO 44712 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T21:48:17.115+03:00  INFO 44712 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T21:48:17.761+03:00  INFO 44712 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T21:48:17.804+03:00  INFO 44712 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interface.
-2025-05-04T21:48:18.341+03:00  INFO 44712 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T21:48:18.351+03:00  INFO 44712 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T21:48:18.351+03:00  INFO 44712 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T21:48:18.392+03:00  INFO 44712 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T21:48:18.393+03:00  INFO 44712 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1278 ms
-2025-05-04T21:48:18.647+03:00  INFO 44712 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T21:48:18.694+03:00  INFO 44712 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T21:48:18.717+03:00  INFO 44712 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T21:48:18.925+03:00  INFO 44712 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T21:48:18.946+03:00  INFO 44712 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T21:48:19.194+03:00  INFO 44712 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a58f2a
-2025-05-04T21:48:19.196+03:00  INFO 44712 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T21:48:19.228+03:00  WARN 44712 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T21:48:19.230+03:00  WARN 44712 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T21:48:19.890+03:00  INFO 44712 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T21:48:19.974+03:00  INFO 44712 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T21:48:20.040+03:00  WARN 44712 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-04T21:48:20.307+03:00  WARN 44712 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-05-04T21:48:20.773+03:00  INFO 44712 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-04T21:48:20.782+03:00  INFO 44712 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
-2025-05-04T21:48:20.842+03:00  INFO 44712 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-05-04T21:48:20.853+03:00  INFO 44712 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 4.086 seconds (process running for 4.407)
-2025-05-04T21:48:38.835+03:00  INFO 44712 --- [user-service] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-04T21:48:38.835+03:00  INFO 44712 --- [user-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-04T21:48:38.837+03:00  INFO 44712 --- [user-service] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-05-04T21:50:27.419+03:00  INFO 40220 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 40220 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T21:50:27.422+03:00  INFO 40220 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T21:50:27.463+03:00  INFO 40220 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T21:50:27.463+03:00  INFO 40220 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T21:50:28.270+03:00  INFO 40220 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T21:50:28.315+03:00  INFO 40220 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
-2025-05-04T21:50:28.867+03:00  INFO 40220 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T21:50:28.876+03:00  INFO 40220 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T21:50:28.877+03:00  INFO 40220 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T21:50:28.914+03:00  INFO 40220 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T21:50:28.915+03:00  INFO 40220 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1451 ms
-2025-05-04T21:50:29.155+03:00  INFO 40220 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T21:50:29.189+03:00  INFO 40220 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T21:50:29.212+03:00  INFO 40220 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T21:50:29.411+03:00  INFO 40220 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T21:50:29.429+03:00  INFO 40220 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T21:50:29.682+03:00  INFO 40220 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ae20556
-2025-05-04T21:50:29.684+03:00  INFO 40220 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T21:50:29.717+03:00  WARN 40220 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T21:50:29.718+03:00  WARN 40220 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T21:50:30.382+03:00  INFO 40220 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T21:50:30.491+03:00  INFO 40220 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T21:50:30.578+03:00  WARN 40220 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-04T21:50:30.922+03:00  WARN 40220 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-05-04T21:50:31.503+03:00  INFO 40220 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-04T21:50:31.516+03:00  INFO 40220 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
-2025-05-04T21:50:31.607+03:00  INFO 40220 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-05-04T21:50:31.620+03:00  INFO 40220 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 4.645 seconds (process running for 5.005)
-2025-05-04T22:12:47.420+03:00  INFO 38608 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 38608 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
-2025-05-04T22:12:47.510+03:00  INFO 38608 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-05-04T22:12:47.561+03:00  INFO 38608 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-04T22:12:47.563+03:00  INFO 38608 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-04T22:12:48.276+03:00  INFO 38608 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-04T22:12:48.369+03:00  INFO 38608 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
-2025-05-04T22:12:48.522+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b3fd9c26-2bbe-3f29-aef2-67dbc2046ea0
-2025-05-04T22:12:48.745+03:00  WARN 38608 --- [user-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2025-05-04T22:12:48.745+03:00  WARN 38608 --- [user-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2025-05-04T22:12:49.077+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-05-04T22:12:49.088+03:00  INFO 38608 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-04T22:12:49.088+03:00  INFO 38608 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2025-05-04T22:12:49.125+03:00  INFO 38608 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-04T22:12:49.125+03:00  INFO 38608 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1562 ms
-2025-05-04T22:12:49.377+03:00  INFO 38608 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-04T22:12:49.419+03:00  INFO 38608 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2025-05-04T22:12:49.425+03:00  INFO 38608 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-04T22:12:49.630+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-04T22:12:49.798+03:00  INFO 38608 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-04T22:12:50.042+03:00  INFO 38608 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78c9256b
-2025-05-04T22:12:50.042+03:00  INFO 38608 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-04T22:12:50.078+03:00  WARN 38608 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-04T22:12:50.078+03:00  WARN 38608 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-05-04T22:12:50.724+03:00  INFO 38608 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-04T22:12:50.803+03:00  INFO 38608 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-04T22:12:50.866+03:00  WARN 38608 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-04T22:12:51.134+03:00  WARN 38608 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2025-05-04T22:12:51.694+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-04T22:12:51.731+03:00  INFO 38608 --- [user-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-04T22:12:51.780+03:00  WARN 38608 --- [user-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-04T22:12:51.785+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
-2025-05-04T22:12:51.851+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-04T22:12:51.911+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-04T22:12:51.921+03:00  INFO 38608 --- [user-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-04T22:12:51.927+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-04T22:12:52.253+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-04T22:12:52.253+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-04T22:12:52.258+03:00  INFO 38608 --- [user-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-04T22:12:52.263+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746385972261 with initial instances count: 0
-2025-05-04T22:12:52.263+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
-2025-05-04T22:12:52.263+03:00  INFO 38608 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746385972263, current=UP, previous=STARTING]
-2025-05-04T22:12:52.263+03:00  INFO 38608 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/DESKTOP-SHQGKFR:user-service:8081: registering service...
-2025-05-04T22:12:52.282+03:00  INFO 38608 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-05-04T22:12:52.282+03:00  INFO 38608 --- [user-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
-2025-05-04T22:12:52.310+03:00  INFO 38608 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 5.22 seconds (process running for 5.598)
-2025-05-04T22:12:52.370+03:00  INFO 38608 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/DESKTOP-SHQGKFR:user-service:8081 - registration status: 204
-2025-05-04T22:13:22.265+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-04T22:13:22.265+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-04T22:13:22.265+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-04T22:13:22.265+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-04T22:13:22.265+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-04T22:13:22.266+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2025-05-04T22:13:22.266+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-04T22:13:22.293+03:00  INFO 38608 --- [user-service] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-06T04:35:10.794+03:00  INFO 10468 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.5 with PID 10468 (F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service\target\classes started by khaled in F:\projects level3\SE2\course-feedback-system\course-feedback-system\user-service)
+2025-05-06T04:35:10.804+03:00  INFO 10468 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-06T04:35:10.842+03:00  INFO 10468 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-06T04:35:10.843+03:00  INFO 10468 --- [user-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-06T04:35:11.606+03:00  INFO 10468 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-06T04:35:11.714+03:00  INFO 10468 --- [user-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interface.
+2025-05-06T04:35:11.884+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=599c6a7b-58e6-3055-b79d-7f2120fc75ee
+2025-05-06T04:35:12.115+03:00  WARN 10468 --- [user-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-05-06T04:35:12.118+03:00  WARN 10468 --- [user-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-06T04:35:12.470+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-06T04:35:12.482+03:00  INFO 10468 --- [user-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-06T04:35:12.482+03:00  INFO 10468 --- [user-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-06T04:35:12.527+03:00  INFO 10468 --- [user-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-06T04:35:12.528+03:00  INFO 10468 --- [user-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1684 ms
+2025-05-06T04:35:12.827+03:00  INFO 10468 --- [user-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-06T04:35:12.867+03:00  INFO 10468 --- [user-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-06T04:35:12.888+03:00  INFO 10468 --- [user-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-06T04:35:13.091+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-06T04:35:13.111+03:00  INFO 10468 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-06T04:35:13.345+03:00  INFO 10468 --- [user-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49d19fcd
+2025-05-06T04:35:13.347+03:00  INFO 10468 --- [user-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-06T04:35:13.383+03:00  WARN 10468 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-06T04:35:13.384+03:00  WARN 10468 --- [user-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-06T04:35:14.136+03:00  INFO 10468 --- [user-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-06T04:35:14.227+03:00  INFO 10468 --- [user-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-06T04:35:14.466+03:00  WARN 10468 --- [user-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-06T04:35:14.738+03:00  WARN 10468 --- [user-service] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-06T04:35:15.285+03:00  WARN 10468 --- [user-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-06T04:35:15.328+03:00  INFO 10468 --- [user-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-06T04:35:15.374+03:00  WARN 10468 --- [user-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-06T04:35:15.383+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoints beneath base path '/actuator'
+2025-05-06T04:35:15.447+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-06T04:35:15.542+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-06T04:35:15.548+03:00  INFO 10468 --- [user-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-06T04:35:15.570+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-06T04:35:15.571+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-06T04:35:15.571+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-06T04:35:15.572+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-06T04:35:15.572+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-06T04:35:15.572+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-06T04:35:15.573+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-06T04:35:15.884+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-06T04:35:15.887+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-06T04:35:15.890+03:00  INFO 10468 --- [user-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-06T04:35:15.894+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746495315894 with initial instances count: 1
+2025-05-06T04:35:15.899+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2025-05-06T04:35:15.900+03:00  INFO 10468 --- [user-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746495315900, current=UP, previous=STARTING]
+2025-05-06T04:35:15.902+03:00  INFO 10468 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/DESKTOP-SHQGKFR:user-service:8081: registering service...
+2025-05-06T04:35:15.916+03:00  INFO 10468 --- [user-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-06T04:35:15.917+03:00  INFO 10468 --- [user-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-05-06T04:35:15.937+03:00  INFO 10468 --- [user-service] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/DESKTOP-SHQGKFR:user-service:8081 - registration status: 204
+2025-05-06T04:35:15.945+03:00  INFO 10468 --- [user-service] [restartedMain] c.c.user_service.UserServiceApplication  : Started UserServiceApplication in 5.503 seconds (process running for 5.899)
+2025-05-06T04:35:54.644+03:00  INFO 10468 --- [user-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-06T04:35:54.644+03:00  INFO 10468 --- [user-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-06T04:35:54.646+03:00  INFO 10468 --- [user-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

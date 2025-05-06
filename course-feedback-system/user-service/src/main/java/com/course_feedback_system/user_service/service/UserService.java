@@ -23,7 +23,7 @@ public class UserService {
     }
 
     public User saveUser(User user) {
-        return userRepository.saveEntity(user);
+        return userRepository.save(user);
     }
 
     public void deleteUser(Long id) {

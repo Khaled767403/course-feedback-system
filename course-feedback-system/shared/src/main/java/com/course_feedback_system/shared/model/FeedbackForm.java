@@ -2,7 +2,12 @@ package com.course_feedback_system.shared.model;
 
 import jakarta.persistence.*;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Getter
+@Setter
 @Entity
 @Table(name = "feedbackforms")
 public class FeedbackForm {
