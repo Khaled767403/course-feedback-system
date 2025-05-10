@@ -11,6 +11,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/questions")
 @RequiredArgsConstructor
+
 public class QuestionController {
 
     private final IQuestionService questionService;
@@ -25,7 +26,7 @@ public class QuestionController {
         return questionService.getQuestionById(id);
     }
 
-    @PostMapping
+    @PostMapping("/createQuestion")
     public Question createQuestion(@RequestBody Question question) {
         return questionService.createQuestion(question);
     }

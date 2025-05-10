@@ -8,25 +8,25 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/answers")
+@RequestMapping("/api/answers")  // Updated root path for answers API
 public class AnswerController {
 
     @Autowired
     private AnswerService answerService;
 
-    // جلب جميع الإجابات الخاصة بـ FeedbackSubmission
+    // Fetch all answers for a specific feedback submission
     @GetMapping("/submission/{submissionId}")
     public List<Answer> getAnswersBySubmissionId(@PathVariable Long submissionId) {
         return answerService.getAnswersBySubmissionId(submissionId);
     }
 
-    // حفظ إجابة جديدة
-    @PostMapping
+    // Save a new answer
+    @PostMapping("/createAnswer")
     public Answer saveAnswer(@RequestBody Answer answer) {
         return answerService.saveAnswer(answer);
     }
 
-    // جلب الإجابات بناءً على السؤال و FeedbackSubmission
+    // Fetch answers based on question and submission
     @GetMapping("/submission/{submissionId}/question/{questionId}")
     public List<Answer> getAnswersByQuestionAndSubmission(
             @PathVariable Long submissionId,

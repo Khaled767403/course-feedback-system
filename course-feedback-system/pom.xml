@@ -30,7 +30,8 @@
 		<module>submission-service</module>
 		<module>api-gateway</module>
 		<module>eureka-server</module>
-	</modules>
+        <module>auth-service</module>
+    </modules>
 
 	<properties>
 		<java.version>21</java.version>

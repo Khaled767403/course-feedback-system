@@ -15,7 +15,7 @@ public class FormController {
 
     private final IFormService formService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<FeedbackForm> getAllForms() {
         return formService.getAllForms();
     }
@@ -25,7 +25,7 @@ public class FormController {
         return formService.getFormById(id);
     }
 
-    @PostMapping
+    @PostMapping("/createForm")
     public FeedbackForm createForm(@RequestBody FeedbackForm form) {
         return formService.createForm(form);
     }
