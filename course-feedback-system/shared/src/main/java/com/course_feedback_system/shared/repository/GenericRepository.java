@@ -9,12 +9,5 @@ import java.util.Optional;
 @Repository
 public interface GenericRepository<T, L extends Number> extends JpaRepository<T, L> {
 
-    // لا داعي لإعادة تعريف findById لأن JpaRepository يحتوي عليها بالفعل
-    // يمكنك تركها كما هي في JpaRepository.
-
-    // لا داعي أيضًا لتعريف findAll لأنه موجود مسبقًا في JpaRepository
-
-    // يتم استخدام save المدمج من JpaRepository
-    // يتم استخدام deleteById المدمج من JpaRepository
 
 }

@@ -27,10 +27,13 @@ public class Answer {
     private Integer rating;
 
     public Long getCourseId() {
-        return submission != null && submission.getForm() != null
+        return submission != null &&
+                submission.getForm() != null &&
+                submission.getForm().getCourse() != null
                 ? submission.getForm().getCourse().getId()
                 : null;
     }
+
 
     public Long getInstructorId() {
         return submission != null && submission.getForm() != null

@@ -60,7 +60,7 @@ public class AnalyticsService implements IAnalyticsService {
 
     private List<FeedbackSubmission> fetchSubmissionsByCourse(Long courseId) {
         FeedbackSubmission[] submissions = restTemplate.getForObject(
-                gatewayUrl + "/api/submissions/form/" + courseId,
+                gatewayUrl + "/api/submissions/course/" + courseId,
                 FeedbackSubmission[].class
         );
         return Arrays.asList(submissions);
@@ -76,7 +76,7 @@ public class AnalyticsService implements IAnalyticsService {
 
     private List<Answer> fetchAnswersBySubmission(Long submissionId) {
         Answer[] answers = restTemplate.getForObject(
-                gatewayUrl + "/api/answers/submission/" + submissionId,
+                gatewayUrl + "/api/submissions/" + submissionId + "/answers",
                 Answer[].class
         );
         return Arrays.asList(answers);

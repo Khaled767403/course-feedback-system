@@ -14,6 +14,11 @@ public class AnswerController {
     @Autowired
     private AnswerService answerService;
 
+    @GetMapping("/all")
+    public List<Answer> getAllAnswers() {
+        return answerService.getAllAnswers();
+    }
+
     // Fetch all answers for a specific feedback submission
     @GetMapping("/submission/{submissionId}")
     public List<Answer> getAnswersBySubmissionId(@PathVariable Long submissionId) {

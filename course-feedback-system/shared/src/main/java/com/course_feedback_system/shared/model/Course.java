@@ -24,5 +24,12 @@ public class Course {
     @JoinColumn(name = "instructor_id", referencedColumnName = "id")
     private User instructor;
 
+
+    public Course() {
+        // no-argument constructor
+    }
+    public Course(Long id) {
+        this.id = id;
+    }
     // Getters and setters
 }

@@ -32,4 +32,10 @@ public class User {
         INSTRUCTOR,
         ADMIN
     }
+    public User() {
+        // no-argument constructor
+    }
+    public User(Long id) {
+        this.id = id;
+    }
 }
